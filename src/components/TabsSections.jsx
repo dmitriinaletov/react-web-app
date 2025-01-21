@@ -13,7 +13,7 @@ export default function TabsSection({ active, onChange }) {
         Feedback
       </Button>
       <Button isActive={active === "effect"} onClick={() => onChange("effect")}>
-        Feedback
+        Effects
       </Button>
     </section>
   );

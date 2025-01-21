@@ -8,7 +8,7 @@ import { useState } from "react";
 import EffectSection from "./components/EffectsSection";
 
 export default function App() {
-  const [tab, setTab] = useState("effect");
+  const [tab, setTab] = useState("main");
 
   return (
     <>
