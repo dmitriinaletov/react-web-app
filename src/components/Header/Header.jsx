@@ -1,18 +1,9 @@
 import logo from "../../logo.svg";
 import { useEffect, useState } from "react";
-import { styled } from "styled-components";
+import TabsSection from "../TabsSections";
+import "./Header.css";
 
-const HeaderContainer = styled.header`
-  height: 50px;
-  display: flex;
-  padding: 0 2rem;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #ccc;
-  background: #fafafa;
-`;
-
-export default function Header() {
+export default function Header({ tab, setTab }) {
   const [now, setNow] = useState(new Date());
 
   useEffect(() => {
@@ -24,9 +15,25 @@ export default function Header() {
   }, []);
 
   return (
-    <HeaderContainer>
-      <img src={logo} alt={"alternative text"} className="logo"></img>
-      <span>Time: {now.toLocaleTimeString()} </span>
-    </HeaderContainer>
+    <header className="header">
+      <div className="header-left">
+        <button className="logo-button" onClick={() => setTab("main")}>
+          <img src={logo} alt="Logo" className="logo" />
+        </button>
+        <TabsSection active={tab} onChange={setTab} />
+      </div>
+      <span className="header-time">{now.toLocaleTimeString()}</span>
+    </header>
   );
 }
+
+//   return (
+//     <header className="header">
+//       <div className="header-left">
+//         <img src={logo} alt="Logo" className="logo" />
+//         <TabsSection active={tab} onChange={setTab} />
+//       </div>
+//       <span className="header-time">{now.toLocaleTimeString()}</span>
+//     </header>
+//   );
+// }

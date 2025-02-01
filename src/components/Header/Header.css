@@ -1,0 +1,44 @@
+.header {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  border-bottom: 1px solid #ccc;
+  background: #fafafa;
+  position: relative; /* Добавляем относительное позиционирование */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header-time {
+  font-size: 14px;
+  color: #555;
+}
+
+.logo-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.logo-button .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.tabs-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%; /* Сдвигаем вниз на 50% высоты контейнера */
+  left: 50%; /* Сдвигаем вправо на 50% ширины контейнера */
+  transform: translate(-50%, -50%); /* Сдвигаем обратно для центрирования */
+  gap: 0.5rem;
+}

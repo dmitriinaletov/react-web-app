@@ -58,3 +58,14 @@ p {
   width: 100%;
   margin-bottom: 1rem;
 }
+
+/* Скрываем скроллбар для всех элементов */
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* Скрываем скроллбар для элементов Firefox */
+* {
+  scrollbar-width: none; /* Firefox */
+}
